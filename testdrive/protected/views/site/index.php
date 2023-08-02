@@ -1,4 +1,7 @@
-<?php $this->pageTitle=Yii::app()->name; ?>
+<?php
+    ini_set('display_errors', 0);
+    error_reporting(E_ERROR);
+    $this->pageTitle=Yii::app()->name; ?>
 
 <p>Я взял первую попавшуюся демку из доки по Yii1 и работал с ее индексной стр, по возможности не меняя другие части демки. Т.к. упомянутую в ТЗ версию Yii 1.24 взять уже негде, я поставил ближайшую
     <a href="https://github.com/yiisoft-contrib/museum/tree/master/files" target="_blank">(список доступных архивных версий Yii1).</a>
@@ -13,7 +16,7 @@
         'columns' => [
             array(
                 'name'=>'bannerId',
-                'footer'=>$total,
+//                'footer'=>$total,
             ),
             array(
                 'name'=>'showed',
