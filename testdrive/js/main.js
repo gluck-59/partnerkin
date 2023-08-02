@@ -7,7 +7,7 @@ function needShow(times) {
     let bannerData;
     if (times == 1) {
         console.log('ПОКАЗАТЬ ЧЕРЕЗ 5с')
-        $.post( "/index.php?r=site/getBanner", { bannerId: 1 }, function( data ) {
+        $.post( "index.php?r=site/getBanner", { bannerId: 1 }, function( data ) {
             bannerData = data;
         }, "json");
 
@@ -17,7 +17,7 @@ function needShow(times) {
     } else if (times%3 == 0) {
         console.log('ПОКАЗАТЬ ЧЕРЕЗ 10с')
 
-        $.post( "/index.php?r=site/getBanner", { bannerId: 2 }, function( data ) {
+        $.post( "index.php?r=site/getBanner", { bannerId: 2 }, function( data ) {
             bannerData = data;
         }, "json");
 
