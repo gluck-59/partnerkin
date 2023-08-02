@@ -76,7 +76,8 @@ class SiteController extends Controller
         $modelStat = new BannerStat();
         $stat = $modelStat->findByAttributes(['id' => $statId]);
 
-        Yii::app()->db->createCommand('UPDATE bannerStat SET clicked = :clicked +1 WHERE id = :statId')->query(array(':statId' => $statId, ':clicked' => (is_null($stat) ? 1 :$stat->getAttributes()['clicked'])));
+        $upd = Yii::app()->db->createCommand('UPDATE bannerStat SET clicked = :clicked +1 WHERE id = :statId')->query(array(':statId' => $statId, ':clicked' => (is_null($stat) ? 1 :$stat->getAttributes()['clicked'])));
+        echo json_encode($upd);
     }
 
 
