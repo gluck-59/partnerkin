@@ -43,7 +43,7 @@ function showBanner(bannerData) {
  * скрвыает баннер, отправляет статистику кликов
  */
 function hideBanner() {
-    $.post( "/index.php?r=site/bannerStat", { statId: $('#popup #close').attr('statId') }, function( data ) { }, "json");
+    $.post( "index.php?r=site/bannerStat", { statId: $('#popup #close').attr('statId') }, function( data ) { }, "json");
     $('#popup').hide(300);
 }
 
